@@ -3,7 +3,6 @@
 module fetch_cycle(
     input logic clk,
     input logic reset,
-
     input logic e_pc_src,            /* mux switch: branch or next instruction */
     input logic [31:0] e_pc_target,  /* target branch instr. index if we are branching */
 

@@ -1,0 +1,90 @@
+[*]
+[*] GTKWave Analyzer v3.3.128 (w)1999-2026 BSI
+[*] Sat Sep 19 18:49:25 2026
+[*]
+[dumpfile] "/home/singul4ri7y/Workspace/l=e^x/riscv-pipeline-core-systemverilog/wave.vcd"
+[dumpfile_mtime] "Sat Sep 19 18:48:25 2026"
+[dumpfile_size] 13575
+[savefile] "/home/singul4ri7y/Workspace/l=e^x/riscv-pipeline-core-systemverilog/gtkwave.gtkw"
+[timestart] 0
+[size] 1536 874
+[pos] -24 -16
+*-8.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 266
+[signals_width] 174
+[sst_expanded] 1
+[sst_vpaned_height] 257
+@800200
+-global
+@28
+pipeline.clk
+pipeline.reset
+@1000200
+-global
+@800200
+-fetch
+@28
+pipeline.e_pc_src
+@22
+pipeline.e_pc_target[31:0]
+pipeline.d_intr[31:0]
+pipeline.d_pc[31:0]
+pipeline.d_pc_plus_4[31:0]
+@1000200
+-fetch
+@800200
+-decode
+@22
+pipeline.e_pc[31:0]
+pipeline.e_RD[4:0]
+pipeline.e_pc_plus_4[31:0]
+@28
+pipeline.e_alu_control[2:0]
+pipeline.e_alu_src
+pipeline.e_mem_write
+pipeline.e_branch
+pipeline.e_register_write
+pipeline.e_result_src
+@22
+pipeline.e_RD1[31:0]
+pipeline.e_RD2[31:0]
+pipeline.e_imm_ext[31:0]
+@1000200
+-decode
+@800200
+-writeback
+@28
+pipeline.w_register_write
+@22
+pipeline.w_RD[4:0]
+pipeline.w_result[31:0]
+@1000200
+-writeback
+@800200
+-execute
+@22
+pipeline.m_RD[4:0]
+pipeline.m_alu_result[31:0]
+@28
+pipeline.m_mem_write
+@22
+pipeline.m_pc_plus_4[31:0]
+@28
+pipeline.m_register_write
+pipeline.m_result_src
+@22
+pipeline.m_write_data[31:0]
+@1000200
+-execute
+@800201
+-memory
+@23
+pipeline.w_alu_result[31:0]
+pipeline.w_pc_plus_4[31:0]
+pipeline.w_read_data[31:0]
+@29
+pipeline.w_result_src
+@1000201
+-memory
+[pattern_trace] 1
+[pattern_trace] 0
