@@ -49,7 +49,7 @@ module pipeline(
     logic e_pc_src;
     logic [31:0] e_pc_target;
 
-    /* Forwarding control signals. */
+    /* Forwarding control signals, for mitigating hazards. */
     logic [1:0] e_forward_a;
     logic [1:0] e_forward_b;
 
@@ -149,6 +149,22 @@ module pipeline(
         .w_alu_result(w_alu_result),
         .w_read_data(w_read_data),
         .w_result(w_result)
+    );
+
+    /* Hazard unit. */
+    hazard hazard_unit(
+        .reset(reset),
+
+        .m_register_write(m_register_write),
+        .w_register_write(w_register_write),
+        
+        .m_RD(m_RD),
+        .w_RD(w_RD),
+        .e_RS1(e_RS1),
+        .e_RS2(e_RS2),
+
+        .e_forward_a(e_forward_a),
+        .e_forward_b(e_forward_b)
     );
 
 endmodule

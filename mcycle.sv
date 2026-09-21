@@ -36,7 +36,7 @@ module memory_cycle(
         .rd(m_read_data)
     );
 
-    always_ff @(posedge clk or negedge reset) begin
+    always_ff @(posedge clk or posedge reset) begin
         if(reset) begin
             /* Reset all Writeback-stage outputs. */
             w_register_write <= 1'b0;

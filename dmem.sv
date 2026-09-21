@@ -15,7 +15,7 @@ module dmem(
 
     /* Write to memory on the rising clock edge. */
     always_ff @(posedge clk) begin
-        if (we)
+        if(we)
             mem[a] <= wd;
     end
 
